@@ -1,0 +1,8 @@
+Name: John Smith, Department: IT
+Monthly Gross Salary: $5000.00, Monthly Bonus: 10.50%, Taxes: 15.00%
+Distance Traveled: 450.50 miles, Traveling Time: 8.50 hours
+Number of Coffee Cups Sold: 120, Cost: $2.50 per cup
+
+Net Salary: $4696.25
+Average Speed: 53.00 mph
+Total Coffee Sales: $300.00
