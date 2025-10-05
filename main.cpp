@@ -47,18 +47,22 @@ int main()
     outFile << fixed << setprecision(2);
     outFile << "Name: " << firstName << " " << lastName << ", Department: " << department << endl;
     outFile << "Monthly Gross Salary: $" << grossSalary << ", Monthly Bonus: " << bonus << "%, Taxes: " << taxRate << "%" << endl;
+    
+    // Calculate paycheck (gross salary with bonus, minus taxes)
+    double paycheck = grossSalary * (1 + bonus/100) * (1 - taxRate/100);
+    outFile << "PayCheck: $" << paycheck << endl;
+    
     outFile << "Distance Traveled: " << distancedTraveled << " miles, Traveling Time: " << travelTime << " hours" << endl;
+    
+    // Calculate average speed
+    double averageSpeed = distancedTraveled / travelTime;
+    outFile << "Average Speed: " << averageSpeed << " miles per hour" << endl;
+    
     outFile << "Number of Coffee Cups Sold: " << nummOfCoffeeCupSold << ", Cost: $" << coffeeCupCost << " per cup" << endl;
     
-    // Calculate and display additional information
-    double netSalary = grossSalary * (1 + bonus/100) * (1 - taxRate/100);
-    double averageSpeed = distancedTraveled / travelTime;
-    double totalCoffeeSales = nummOfCoffeeCupSold * coffeeCupCost;
-    
-    outFile << endl;
-    outFile << "Net Salary: $" << netSalary << endl;
-    outFile << "Average Speed: " << averageSpeed << " mph" << endl;
-    outFile << "Total Coffee Sales: $" << totalCoffeeSales << endl;
+    // Calculate sales amount
+    double salesAmount = nummOfCoffeeCupSold * coffeeCupCost;
+    outFile << "Sales Amount = $" << salesAmount << endl;
     
     // Close files
     inFile.close();
